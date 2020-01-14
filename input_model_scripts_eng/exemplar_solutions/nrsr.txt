@@ -1,0 +1,58 @@
+entity set persons {
+	"name"
+	"surname"
+};
+
+entity set assembly {
+	"start"
+	"ends"
+};
+
+entity set agenda {
+	"when"
+	"order"
+};
+
+entity set documents {
+	"name"
+	"text"
+};
+
+entity set "agenda_type" {
+	"name"
+};
+
+entity set "vote_options" {
+	"name"
+};
+
+association "assembled_deputies" between 
+{
+	persons MANY 
+	assembly MANY
+}{};
+
+association between 
+{
+	assembly ONE 
+	agenda MANY
+}{};
+
+association "agenda_documents" between 
+{
+	agenda MANY 
+	documents MANY
+}{};
+
+association between 
+{
+	agenda MANY 
+	"agenda_type" ONE
+}{};
+
+association "voting" between 
+{
+	persons	MANY 
+	agenda MANY 
+	"vote_options" ONE
+}{};

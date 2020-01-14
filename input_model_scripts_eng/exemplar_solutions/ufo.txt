@@ -1,0 +1,72 @@
+entity set "airplane_model" {
+	"code"
+};
+
+entity set "fight_model" {
+};
+
+entity set "rocket_type" {
+};
+
+entity set "transport_model" {
+	"person_capacity"
+	"weight_capacity"
+	"volume_capacity"
+};
+
+entity set airplane {
+	"serial_number"
+	"name"
+};
+
+entity set marine {
+	"health"
+	"maximum_health"
+	"speed"
+	"strength"
+	"dexterity"
+	"inteligence"
+};
+
+entity set "marine_role" {
+	"maximum_health_modificator"
+	"speed_modificator"
+	"strength_modificator"
+	"dexterity_modificator"
+	"inteligence_modificator"
+	"name"	
+};
+
+association between 
+{
+	"airplane_model" ONE
+	airplane MANY
+}{
+};
+
+association "serves" between 
+{
+	"airplane" ONE
+	"marine_role" ONE
+	"marine" MANY
+}{
+};
+
+association "carries" between 
+{
+	"airplane" MANY
+	"rocket_type" MANY
+}{
+};
+
+association "can_carry" between 
+{
+	"fight_model" MANY
+	"rocket_type" MANY
+}{
+	"amount"
+};
+
+generalization from "fight_model" to "airplane_model";
+
+generalization from "transport_model" to "airplane_model";

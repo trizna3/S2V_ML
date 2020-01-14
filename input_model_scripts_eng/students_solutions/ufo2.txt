@@ -1,0 +1,71 @@
+entity set "airplane" {
+	"serial_number"
+	"name"
+};
+
+entity set "marines" {
+	"name"
+	"health"
+	"maximum_health"
+	"dexterity"
+	"inteligence"
+};
+
+entity set "models" {
+	"model_name"
+};
+
+entity set "roles" {
+	"name"
+	"maximum_health_modificator"
+	"health_modificator"
+	"strength_modificator"
+	"dexterity_modificator"
+	"inteligence_modificator"
+};
+
+entity set "fighters" {
+};
+
+entity set "transports" {
+	"person_capacity"
+	"maximum_volume"
+	"material_weight"
+};
+
+entity set "load" {
+	"rocket_type"
+	"amount"
+};
+
+association between 
+{
+	"airplane" MANY
+	"models" ONE
+}{
+};
+
+association "assigned_to" between 
+{
+	"airplane" ONE
+	"marines" ONE
+	"roles" ONE
+}{
+};
+
+association "nesie" between 
+{
+	"airplane" ONE
+	"load" MANY
+}{
+};
+
+association between 
+{
+	"fighters" ONE
+	"load" MANY
+}{
+};
+
+generalization from "fighters" to "models";
+generalization from "transports" to "models";

@@ -1,0 +1,16 @@
+1:account:name,password
+2:contract:start,end,fee
+3:life_insurance:death_payment,injury_payment,daily_payment
+4:real_estate_insurance:crash_payment,disaster_payment,living_area,cellar_area
+5:persons:name,surname,id
+6:addresses:street,mumber,city,zipcode,country
+7:real_estate_types:name
+=
+8:customer:name,address,sex,id
+9:account:name,password
+10:insurance:start,end,fee
+11:life_insurance:death_payment,harm_payment,daily_payment,insured_name,insured_address,insurer_name,insurer_address
+12:realestate_insurance:crash_payment,disaster_payment,customer_name,customer_address,realestate_address,area,type
+13:persons:name,birthdate,sex,nationality,address
+14:realestates:address,type,living_area,cellar_area
+=

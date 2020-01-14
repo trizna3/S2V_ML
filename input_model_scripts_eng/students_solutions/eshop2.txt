@@ -1,0 +1,25 @@
+entity set "products" {
+	"name"
+	"weight"
+	"price"
+};
+
+entity set "product_types" {
+};
+
+entity set "attributes" {
+};
+
+association between
+{
+	"products" MANY
+	"product_types" ONE
+}{
+};
+
+association between
+{
+	"attributes" MANY
+	"product_types" ONE
+}{
+};

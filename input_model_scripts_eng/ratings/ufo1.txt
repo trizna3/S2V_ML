@@ -1,0 +1,38 @@
+==
+Issues found: 27
+-
+Missing entity set: 'modely lietadiel'
+Missing entity set: 'stihacie modely'
+Missing entity set: 'typy rakiet'
+Missing entity set: 'role vojakov'
+-
+Unnecessary or misused entity set: 'obranny system'
+Unnecessary or misused entity set: 'druh lietadla'
+Unnecessary or misused entity set: 'raketa'
+Unnecessary or misused entity set: 'stihacie lietadla'
+-
+Missing relationship between 'lietadla' and 'typy rakiet'
+Missing relationship between 'stihacie modely' and 'typy rakiet'
+Missing relationship between 'modely lietadiel' and 'lietadla'
+Missing relationship between 'modely lietadiel' and 'stihacie modely'
+Missing relationship between 'modely lietadiel' and 'dopravne modely'
+-
+Unnecessary relationship between 'stihacie lietadla' and 'raketa'
+Unnecessary relationship between 'obranny system' and 'lietadla'
+Unnecessary relationship between 'obranny system' and 'vojak'
+Unnecessary relationship between 'lietadla' and 'druh lietadla'
+Unnecessary relationship between 'druh lietadla' and 'dopravne'
+Unnecessary relationship between 'druh lietadla' and 'stihacie lietadla'
+-
+Wrong cardinality on association between 'lietadla' and 'vojak'
+Wrong cardinality on association between 'lietadla' and 'vojak'
+-
+Wrong relationship type on Relationship between 'lietadla' and 'vojak'
+-
+Unnecessary or misused attribute 'model' at entity set 'lietadla'
+Unnecessary or misused attribute 'druh' at entity set 'lietadla'
+Unnecessary or misused attribute 'lietadlo' at entity set 'vojak'
+Unnecessary or misused attribute 'rola' at entity set 'vojak'
+Unnecessary or misused attribute 'meno' at entity set 'vojak'
+==
+Time elapsed: 1113 miliseconds

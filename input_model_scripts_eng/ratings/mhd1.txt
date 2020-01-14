@@ -1,0 +1,21 @@
+==
+Issues found: 10
+-
+Missing entity set: 'typy vozidiel'
+-
+Unnecessary or misused entity set: 'trvanie cesty'
+-
+Missing relationship between 'typy vozidiel' and 'vozidla'
+-
+Unnecessary relationship between 'linky' and 'trvanie cesty'
+-
+Wrong cardinality on association between 'zastavka' and 'linky'
+Wrong cardinality on association between 'zastavka' and 'linky'
+-
+Missing attribute 'cas po zastavku' at entity set 'zahrna'
+Missing attribute 'poradove cislo' at entity set 'zahrna'
+-
+Unnecessary or misused attribute 'cas' at entity set 'vozidlo'
+Unnecessary or misused attribute 'trasa' at entity set 'linky'
+==
+Time elapsed: 522 miliseconds

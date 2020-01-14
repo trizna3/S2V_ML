@@ -1,0 +1,13 @@
+1:vehicle:code
+2:vehicle_type:name
+3:line:number
+4:stop:name
+=
+5:stops:name
+6:vehicles:code,vehicle_type
+7:durations:duration
+8:lines:number,vehicle_type
+=
+1-6
+3-8
+4-5

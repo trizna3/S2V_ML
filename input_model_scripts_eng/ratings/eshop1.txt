@@ -1,0 +1,18 @@
+==
+Issues found: 9
+-
+Missing entity set: 'typy produktov'
+Missing entity set: 'nazvy specialnych atributov'
+-
+Unnecessary or misused entity set: 'typ produktov'
+Unnecessary or misused entity set: 'atributy'
+-
+Missing relationship between 'produkty' and 'nazvy specialnych atributov'
+Missing relationship between 'typy produktov' and 'nazvy specialnych atributov'
+Missing relationship between 'typy produktov' and 'produkty'
+-
+Unnecessary relationship between 'produkty' and 'typ produktov' and 'atributy'
+-
+Unnecessary or misused attribute 'typ nazov' at entity set 'produkty'
+==
+Time elapsed: 444 miliseconds

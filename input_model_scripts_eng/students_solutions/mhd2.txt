@@ -1,0 +1,46 @@
+entity set stops {
+	"name"
+};
+
+entity set vehicles {
+	"code"
+	"vehicle_type"
+};
+
+entity set durations {
+	"duration"
+};
+
+entity set lines {
+	"number"
+	"vehicle_type"
+};
+
+association "zl" between 
+{
+	vehicles MANY
+	lines MANY
+}{
+	"duration"
+};
+
+association between 
+{
+	vehicles ONE
+	lines MANY
+}{
+};
+
+association between 
+{
+	vehicles ONE
+	durations MANY
+}{
+};
+
+association between 
+{
+	durations ONE
+	lines MANY
+}{
+};

@@ -1,0 +1,52 @@
+
+entity set parliament {
+};
+
+entity set deputy {
+	"name"
+	"lastname"
+};
+
+entity set assembly {
+	"name"
+	"duration"
+	};
+
+entity set agenda {
+};
+
+entity set documents {
+	"name"
+};
+
+entity set "agenda_type" {
+	"minimum_votes"
+};
+
+entity set "vote_history" {
+	"where"
+	"how"
+};
+
+entity set "vote_type" {
+	"for"
+	"against"
+	"both"
+	"nothing"
+};
+
+association between {parliament ONE deputy MANY}{};
+
+association between {deputy MANY "vote_history" ONE}{};
+
+association between {deputy MANY "vote_history" ONE}{};
+
+association between {agenda MANY documents ONE}{};
+
+generalization from "agenda_type" to agenda;
+
+association between {agenda MANY assembly ONE}{};
+
+association "assembled_deputies" between {deputy MANY assembly MANY}{};
+
+association "voting" between {deputy MANY agenda MANY assembly ONE}{};

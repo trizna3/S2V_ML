@@ -1,0 +1,69 @@
+entity set buildings {
+	"street"
+	"number"
+	"city"
+	"zipcode"
+};
+
+entity set rooms {
+	"number"
+	"floor"
+	"capacity"
+	"fee"
+};
+
+entity set contracts {
+	"start"
+	"end"
+};
+
+entity set payments {
+	"amount"
+	"date"
+};
+
+entity set account {
+	"credit"
+};
+
+entity set students {
+	"name"
+	"surname"
+	"id"
+};
+
+association between 
+{
+	buildings ONE 
+	rooms MANY
+}{};
+
+association between 
+{
+	rooms ONE
+	contracts MANY
+}{};
+
+association between 
+{
+	contracts ONE 
+	payments MANY
+}{};
+
+association between 
+{
+	contracts MANY 
+	students ONE
+}{};
+
+association between 
+{
+	payments MANY
+	account ONE
+}{};
+
+association between 
+{
+	account ONE
+	students ONE
+}{};

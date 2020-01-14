@@ -1,0 +1,16 @@
+==
+Issues found: 7
+-
+Missing entity set: 'typy vztahu'
+-
+Unnecessary or misused entity set: 'osoba2'
+-
+Missing relationship between 'osoby' and 'dvojice vo vztahu'
+Missing relationship between 'osoby' and 'dvojice vo vztahu'
+Missing relationship between 'typy vztahu' and 'dvojice vo vztahu'
+-
+Unnecessary relationship between 'osoba1' and 'osoba2' and 'vztahy'
+-
+Unnecessary or misused attribute 'vztah' at entity set 'vztahy'
+==
+Time elapsed: 350 miliseconds

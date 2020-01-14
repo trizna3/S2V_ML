@@ -1,0 +1,9 @@
+1:substance:name,formula
+2:reaction:formula
+=
+3:substance:name,equation
+4:reaction:equation
+5:product:formula,substance_weight
+=
+1-3
+2-4

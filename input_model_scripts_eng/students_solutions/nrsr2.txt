@@ -1,0 +1,85 @@
+entity set assembly {
+	"duration"
+};
+
+entity set agendas {
+	"name"
+	"deputy_count"
+};
+
+entity set documents {
+	"name"
+};
+
+entity set deputies {
+	"name"
+	"lastname"
+};
+
+entity set "voting" {
+	"vote"
+};
+
+entity set "history" {
+	"name"
+	"surname"
+	"vote"
+};
+
+entity set "vote_options" {
+	"vote_option"
+};
+
+association between 
+{
+	assembly ONE 
+	agendas MANY
+}{};
+
+association between 
+{
+	assembly MANY
+	history MANY
+}{};
+
+association "assembled_deputies" between 
+{
+	assembly MANY 
+	deputies MANY
+}{};
+
+association "documents_in_agenda" between 
+{
+	agendas MANY 
+	documents MANY
+}{};
+
+association between 
+{
+	agendas ONE
+	"voting" MANY
+}{};
+
+association between 
+{
+	"voting" MANY
+	deputies ONE
+}{};
+
+association between 
+{
+	"voting" ONE
+	history ONE
+}{};
+
+association between 
+{
+	"vote_options" MANY 
+	"voting" MANY
+}{};
+
+association between 
+{
+	"vote_options" MANY 
+	history MANY
+}{};

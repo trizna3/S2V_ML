@@ -1,0 +1,6 @@
+1:substance:name,formula
+2:reaction:formula
+=
+3:substances:name,formula
+4:reaction:equation,reaktant_a_weight,reaktant_b_weight,katalyzator_weight
+=

@@ -1,0 +1,17 @@
+==
+Issues found: 8
+-
+Missing entity set: 'nazvy specialnych atributov'
+-
+Missing relationship between 'typy produktov' and 'nazvy specialnych atributov'
+-
+Wrong cardinality on association between 'produkty' and 'typ produktu'
+-
+Missing attribute 'vaha' at entity set 'typ produktu'
+Missing attribute 'cena' at entity set 'typ produktu'
+Missing attribute 'hodnota' at entity set 'atributy produktu'
+-
+Unnecessary or misused attribute 'vaha' at entity set 'produkty'
+Unnecessary or misused attribute 'cena' at entity set 'produkty'
+==
+Time elapsed: 315 miliseconds

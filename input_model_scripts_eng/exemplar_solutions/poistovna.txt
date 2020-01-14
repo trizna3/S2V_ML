@@ -1,0 +1,81 @@
+entity set account {
+	"name"
+	"password"
+};
+
+entity set contract {
+	"start"
+	"end"
+	"fee"
+};
+
+entity set "life_insurance" {
+	"death_payment"
+	"injury_payment"
+	"daily_payment"
+};
+
+entity set "real_estate_insurance" {
+	"crash_payment"
+	"disaster_payment"
+	"living_area"
+	"cellar_area"
+};
+
+entity set persons {
+	"name"
+	"surname"
+	"id"
+};
+
+entity set addresses {
+	"street"
+	"mumber"
+	"city"
+	"zipcode"
+	"country"
+};
+
+entity set "real_estate_types" {
+	"name"
+};
+
+association between 
+{
+	account ONE 
+	contract MANY
+}{};
+
+association between 
+{
+	persons ONE
+	life_insurance ONE
+}{};
+
+association between 
+{
+	persons ONE
+	real_estate_insurance ONE
+}{};
+
+association between 
+{
+	persons ONE 
+	addresses ONE
+}{};
+
+association between 
+{
+	addresses ONE
+	real_estate_insurance ONE
+}{};
+
+association between 
+{
+	real_estate_types ONE
+	real_estate_insurance MANY
+}{};
+
+generalization from life_insurance to contract;
+
+generalization from real_estate_insurance to contract;

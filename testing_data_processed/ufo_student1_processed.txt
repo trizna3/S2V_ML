@@ -1,0 +1,16 @@
+1:airplane_model:code
+2:fight_model:
+3:rocket_type:
+4:transport_model:person_capacity,weight_capacity,volume_capacity
+5:airplane:serial_number,name
+6:marine:health,maximum_health,speed,strength,dexterity,inteligence
+7:marine_role:maximum_health_modificator,speed_modificator,strength_modificator,dexterity_modificator,inteligence_modificator,name
+=
+8:defense_system:airplane,marine
+9:airplanes:serial_number,name,model,type
+10:marine:name,health,maximum_health,speed,strength,dexterity,inteligence,airplane,role
+11:transport:capacity,volume,material_weight
+12:airplane_type:figting,transporting
+13:rocket:weight
+14:fighter_airplane:rocket_amount,rocket_type
+=

@@ -1,0 +1,15 @@
+1:persons:name,surname
+2:assembly:start,ends
+3:agenda:when,order
+4:documents:name,text
+5:agenda_type:name
+6:vote_options:name
+=
+7:assembly:duration
+8:agendas:name,deputy_count
+9:documents:name
+10:deputies:name,lastname
+11:voting:vote
+12:history:name,surname,vote
+13:vote_options:vote_option
+=

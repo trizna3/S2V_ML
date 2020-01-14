@@ -1,0 +1,11 @@
+==
+Issues found: 5
+-
+Missing attribute 'nazov' at entity set 'typy vztahov'
+-
+Unnecessary or misused attribute 'nazov' at entity set 'vztahy'
+Unnecessary or misused attribute 'osoba1' at entity set 'vztahy'
+Unnecessary or misused attribute 'osoba2' at entity set 'vztahy'
+Unnecessary or misused attribute 'typ' at entity set 'typy vztahov'
+==
+Time elapsed: 364 miliseconds

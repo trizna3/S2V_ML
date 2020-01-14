@@ -1,0 +1,22 @@
+entity set "products" {
+	"name"
+	"weight"
+	"price"
+};
+
+entity set "product_type" {
+	"refrigirator"
+	"washing_machine"
+};
+
+entity set "attributes" {
+	"volume"
+};
+
+association between
+{
+	"products" ONE
+	"product_type" ONE
+	"attributes" ONE
+}{
+};

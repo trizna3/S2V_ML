@@ -1,0 +1,34 @@
+entity set "person" {
+	"name"
+	"surname"
+	"birthdate"
+};
+
+entity set "pairs" {
+	"from"
+};
+
+entity set "relationship_type" {
+	"name"
+};
+
+association "person1" between 
+{
+	"person" ONE
+	"pairs" MANY
+}{
+};
+
+association "person2" between 
+{
+	"person" ONE
+	"pairs" MANY
+}{
+};
+
+association between 
+{
+	"relationship_type" ONE
+	"pairs" MANY
+}{
+};

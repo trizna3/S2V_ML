@@ -1,0 +1,24 @@
+entity set "package" {
+	"name"
+	"price"
+};
+
+entity set "data_package" {
+	"speed"
+	"volume"
+};
+
+entity set "voice_package" {
+	"free_seconds"
+	"second_price"
+};
+
+entity set "sms_package" {
+	"letters"
+};
+
+generalization from "data_package" to "package";
+
+generalization from "voice_package" to "package";
+
+generalization from "sms_package" to "package";

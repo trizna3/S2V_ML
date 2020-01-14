@@ -1,0 +1,36 @@
+entity set accounts {
+	"name"
+	"password"
+};
+
+entity set contract {};
+
+entity set "insurance_types" {
+	"name"
+};
+
+entity set "isured_object" {
+	"name"
+	"amount"
+};
+
+association contracts between 
+{
+	accounts ONE 
+	contract MANY
+}{
+	"start"
+	"end"	
+};
+
+association between 
+{
+	contract	MANY
+	"insurance_types" ONE
+}{};
+
+association between 
+{
+	contract MANY
+	"isured_object" ONE
+}{};

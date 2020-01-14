@@ -1,0 +1,22 @@
+==
+Issues found: 13
+-
+Missing relationship between 'chemicke latky' and 'chemicke reakcie'
+Missing relationship between 'chemicke latky' and 'chemicke reakcie'
+Missing relationship between 'chemicke latky' and 'chemicke reakcie'
+Missing relationship between 'chemicke latky' and 'chemicke reakcie'
+Missing relationship between 'chemicke latky' and 'chemicke reakcie'
+Missing relationship between 'chemicke latky' and 'chemicke reakcie'
+-
+Wrong cardinality on association between 'chemicke reakcie' and 'produkt'
+Wrong cardinality on association between 'chemicke latky' and 'chemicke reakcie'
+Wrong cardinality on association between 'chemicke latky' and 'chemicke reakcie'
+-
+Wrong relationship type on Relationship between 'chemicke reakcie' and 'produkt'
+-
+Missing attribute 'hmotnost' at entity set 'katalyzator'
+-
+Unnecessary or misused attribute 'hmotnost chemickych latok' at entity set 'produkt'
+Unnecessary or misused attribute 'chemicke rovnica' at entity set 'produkt'
+==
+Time elapsed: 364 miliseconds

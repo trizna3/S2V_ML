@@ -1,0 +1,31 @@
+entity set "services" {
+	"id"
+	"name"
+	"price"
+};
+
+entity set "data" {
+	"speed"
+	"volume"
+	"id"
+};
+
+entity set "voice" {
+	"id"
+	"seconds"
+	"price"
+};
+
+entity set "sms" {
+	"id"
+	"max"
+};
+
+association "is_package" between 
+{
+	"data" MANY
+	"voice" MANY
+	"sms" MANY
+	"services" ONE
+}{
+};

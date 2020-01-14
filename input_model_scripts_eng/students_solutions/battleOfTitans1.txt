@@ -1,0 +1,71 @@
+entity set game {};
+
+entity set "board" {
+	"row"
+	"column"
+};
+
+entity set unit {
+	"name"
+	"attack_strength"
+	"defense_strength"
+};
+
+entity set "weather_type" {};
+
+entity set "tile_type" {};
+
+entity set "fuel_type" {};
+
+association "actual_state" between 
+{
+	game MANY 
+	"board" ONE
+}{
+	"turn"
+};
+
+association "state" between 
+{
+	"board" MANY
+	unit MANY
+}{
+	"row"
+	"column"
+	"health"
+	"points"
+};
+
+association "weather" between 
+{
+	"board" MANY
+	"weather_type" MANY
+}{
+	"column"
+	"row"
+};
+
+association "position" between 
+{
+	"board" MANY 
+	"tile_type" MANY
+}{
+	"row"
+	"column"
+};
+
+association between 
+{
+	unit MANY 
+	"fuel_type" ONE
+}{};
+
+
+association "move" between 
+{
+	"weather_type" MANY
+	"fuel_type" MANY
+	"tile_type" MANY
+}{
+	"points"
+};

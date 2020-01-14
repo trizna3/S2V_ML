@@ -1,0 +1,33 @@
+==
+Issues found: 22
+-
+Missing entity set: 'stihacie modely'
+Missing entity set: 'typy rakiet'
+-
+Unnecessary or misused entity set: 'stihacky'
+Unnecessary or misused entity set: 'naklad'
+-
+Missing relationship between 'stihacie modely' and 'typy rakiet'
+Missing relationship between 'modely lietadiel' and 'stihacie modely'
+-
+Unnecessary relationship between 'stihacky' and 'naklad'
+Unnecessary relationship between 'modely' and 'stihacky'
+-
+Wrong cardinality on association between 'lietadla' and 'naklad'
+-
+Missing attribute 'kapacita objem' at entity set 'dopravne lietadla'
+Missing attribute 'kapacita hmotnost' at entity set 'dopravne lietadla'
+Missing attribute 'rychlost' at entity set 'vojaci'
+Missing attribute 'inteligencia' at entity set 'vojaci'
+Missing attribute 'obratnost' at entity set 'vojaci'
+Missing attribute 'sila' at entity set 'vojaci'
+Missing attribute 'modifikator rychlosti' at entity set 'role'
+Missing attribute 'nazov prace' at entity set 'role'
+-
+Unnecessary or misused attribute 'maximalny objem' at entity set 'dopravne lietadla'
+Unnecessary or misused attribute 'material hmotnost' at entity set 'dopravne lietadla'
+Unnecessary or misused attribute 'meno' at entity set 'vojaci'
+Unnecessary or misused attribute 'meno' at entity set 'role'
+Unnecessary or misused attribute 'modifikator zivota' at entity set 'role'
+==
+Time elapsed: 511 miliseconds

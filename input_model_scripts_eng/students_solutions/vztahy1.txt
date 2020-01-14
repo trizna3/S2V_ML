@@ -1,0 +1,24 @@
+entity set "person1" {
+	"name"
+	"surname"
+	"birth_date"
+};
+
+entity set "person2" {
+	"name"
+	"surname"
+	"birth_date"
+};
+
+entity set "relationships" {
+	"relationship"
+	"date"
+};
+
+association between 
+{
+	"person1" ONE
+	"person2" ONE
+	"relationships" ONE
+}{
+};

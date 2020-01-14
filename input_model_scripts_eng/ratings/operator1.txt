@@ -1,0 +1,23 @@
+==
+Issues found: 13
+-
+Missing entity set: 'datove baliky'
+Missing entity set: 'hlasove baliky'
+Missing entity set: 'sms baliky'
+-
+Unnecessary or misused entity set: 'datovy'
+Unnecessary or misused entity set: 'hlasovy'
+Unnecessary or misused entity set: 'sms'
+-
+Missing relationship between 'typy balikov' and 'datove baliky'
+Missing relationship between 'typy balikov' and 'hlasove baliky'
+Missing relationship between 'typy balikov' and 'sms baliky'
+-
+Unnecessary relationship between 'datovy' and 'hlasovy' and 'sms' and 'sluzby'
+-
+Missing attribute 'mesacny poplatok' at entity set 'sluzby'
+-
+Unnecessary or misused attribute 'id' at entity set 'sluzby'
+Unnecessary or misused attribute 'cena' at entity set 'sluzby'
+==
+Time elapsed: 405 miliseconds

@@ -1,0 +1,8 @@
+1:product_type:name
+2:attribute_keys:key
+3:product:weight,price
+=
+4:products:name,weight,price
+5:product_type:refrigirator,washing_machine
+6:attributes:volume
+=

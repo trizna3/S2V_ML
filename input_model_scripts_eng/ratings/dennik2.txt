@@ -1,0 +1,10 @@
+==
+Issues found: 4
+-
+Missing attribute 'hmotnost' at entity set 'reaktant1'
+-
+Unnecessary or misused attribute 'hmotnost reaktantu a' at entity set 'chemicke reakcie'
+Unnecessary or misused attribute 'hmotnost reaktantu b' at entity set 'chemicke reakcie'
+Unnecessary or misused attribute 'hmotnost katalyzatora' at entity set 'chemicke reakcie'
+==
+Time elapsed: 488 miliseconds

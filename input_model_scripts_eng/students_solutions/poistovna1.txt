@@ -1,0 +1,81 @@
+entity set customer {
+	"name"
+	"address"
+	"sex"
+	"id"
+};
+
+entity set account {
+	"name"
+	"password"
+};
+
+entity set insurance {
+	"start"
+	"end"
+	"fee"
+};
+
+entity set "life_insurance" {
+	"death_payment"
+	"harm_payment"
+	"daily_payment"
+	"insured_name"
+	"insured_address"
+	"insurer_name"
+	"insurer_address"
+};
+
+entity set "realestate_insurance" {
+	"crash_payment"
+	"disaster_payment"
+	"customer_name"
+	"customer_address"
+	"realestate_address"
+	"area"
+	"type"
+};
+
+entity set persons {
+	"name"
+	"birthdate"
+	"sex"
+	"nationality"
+	"address"
+};
+
+entity set realestates {
+	"address"
+	"type"
+	"living_area"
+	"cellar_area"
+};
+
+association between 
+{
+	customer ONE 
+	"life_insurance" MANY
+}{};
+
+association between 
+{
+	customer ONE
+	"realestate_insurance" MANY
+}{};
+
+association between 
+{
+	account ONE
+	insurance MANY
+}{};
+
+association between 
+{
+	persons ONE 
+	"life_insurance" MANY
+}{};
+
+
+generalization from "life_insurance" to "insurance";
+
+generalization from "realestate_insurance" to "insurance";

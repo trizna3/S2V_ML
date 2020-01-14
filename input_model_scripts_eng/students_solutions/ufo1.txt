@@ -1,0 +1,85 @@
+entity set "defense_system" {
+	"airplane"
+	"marine"
+};
+
+entity set "airplanes" {
+	"serial_number"
+	"name"
+	"model"
+	"type"
+};
+
+entity set "marine" {
+	"name"
+	"health"
+	"maximum_health"
+	"speed"
+	"strength"
+	"dexterity"
+	"inteligence"
+	"airplane"
+	"role"
+};
+
+entity set "transport" {
+	"capacity"
+	"volume"
+	"material_weight"
+};
+
+entity set "airplane_type" {
+	"figting"
+	"transporting"
+};
+
+entity set "rocket" {
+	"weight"
+};
+
+entity set "fighter_airplane" {
+	"rocket_amount"
+	"rocket_type"
+};
+
+association between 
+{
+	"defense_system" ONE
+	"airplanes" MANY
+}{
+};
+
+association between 
+{
+	"defense_system" ONE
+	"marine" MANY
+}{
+};
+
+association between 
+{
+	"airplanes" MANY
+	"airplane_type" ONE
+}{
+};
+
+association between 
+{
+	"airplane_type" MANY
+	"transport" ONE
+}{
+};
+
+association between 
+{
+	"airplane_type" MANY
+	"fighter_airplane" ONE
+}{
+};
+
+association between 
+{
+	"fighter_airplane" MANY
+	"rocket" MANY
+}{
+};

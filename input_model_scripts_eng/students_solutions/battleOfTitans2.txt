@@ -1,0 +1,65 @@
+entity set game {
+	"id"
+};
+
+entity set "board" {
+	"row"
+	"column"
+};
+
+entity set weathers {
+	"weather_1"
+	"weather_2"
+	"weather_3"
+};
+
+entity set tiles {
+	"type"
+	"unit"
+};
+
+entity set units {
+	"name"
+	"health"
+	"attack"
+	"defense"
+	"points"
+};
+
+entity set fuel {
+	"type"
+};
+
+entity set "move_count" {};
+
+association between 
+{
+	game MANY
+	"board" ONE
+}{};
+
+association between 
+{
+	"board" ONE
+	tiles MANY
+}{};
+
+association "board_weather" between 
+{
+	"board" MANY
+	weathers MANY
+}{};
+
+association between 
+{
+	tiles ONE 
+	units ONE
+}{};
+
+association between 
+{
+	units MANY
+	"fuel" ONE
+}{};
+
+generalization from "move_count" to "weathers";

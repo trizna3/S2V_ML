@@ -1,0 +1,8 @@
+1:person:name,surname,birthdate
+2:pairs:from
+3:relationship_type:name
+=
+4:persons:name,surname,birthdate
+5:relationships:person1,person2,date,name
+6:relationship_types:type
+=

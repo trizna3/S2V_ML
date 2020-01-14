@@ -1,0 +1,39 @@
+entity set "substances" {
+	"name"
+	"formula"
+};
+
+entity set "reaction" {
+	"equation"	
+	"reaktant_a_weight"
+	"reaktant_b_weight"
+	"katalyzator_weight"
+};
+
+association between 
+{
+	"substances" ONE 
+	"reaction" MANY
+}{
+};
+
+association between 
+{
+	"substances" ONE 
+	"reaction" MANY
+}{
+};
+
+association between 
+{
+	"substances" ONE 
+	"reaction" MANY
+}{
+};
+
+association between 
+{
+	"reaction" MANY
+	"substances" ONE 
+}{
+};

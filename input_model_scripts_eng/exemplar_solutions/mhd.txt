@@ -1,0 +1,36 @@
+entity set vehicle {
+	"code"
+};
+
+entity set "vehicle_type" {
+	"name"
+};
+
+entity set line {
+	"number"
+};
+
+entity set stop {
+	"name"
+};
+
+association between {
+	"vehicle_type" ONE
+	vehicle MANY
+}{
+};
+
+association "rides_on_line" between {
+	line MANY
+	vehicle MANY
+}{
+"time"
+};
+
+association "contains" between {
+	line MANY
+	stop MANY
+}{
+	"order"
+	"time"
+};

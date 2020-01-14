@@ -1,0 +1,14 @@
+1:package_type:name,monthly_fee
+2:data_package:maximum_speed,maximum_capacity
+3:voice_package:free_seconds,second_fee
+4:sms_package:maximum_characters
+=
+5:package:name,price
+6:data_package:speed,volume
+7:voice_package:free_seconds,second_price
+8:sms_package:letters
+=
+1-5
+2-6
+3-7
+4-8

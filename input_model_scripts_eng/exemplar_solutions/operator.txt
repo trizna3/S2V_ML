@@ -1,0 +1,24 @@
+entity set "package_type" {
+	"name"
+	"monthly_fee"
+};
+
+entity set "data_package" {
+	"maximum_speed"
+	"maximum_capacity"
+};
+
+entity set "voice_package" {
+	"free_seconds"
+	"second_fee"
+};
+
+entity set "sms_package" {
+	"maximum_characters"
+};
+
+generalization from "data_package" to "package_type";
+
+generalization from "voice_package" to "package_type";
+
+generalization from "sms_package" to "package_type";

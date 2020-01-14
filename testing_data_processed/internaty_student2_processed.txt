@@ -1,0 +1,14 @@
+1:buildings:street,number,city,zipcode
+2:rooms:number,floor,capacity,fee
+3:contracts:start,end
+4:payments:amount,date
+5:account:credit
+6:students:name,surname,id
+=
+7:hostel:
+8:building:floor,address
+9:room:capacity
+10:contract:start,end
+11:fee:amount,time
+12:accomodated:account
+=

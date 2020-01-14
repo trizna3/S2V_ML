@@ -1,0 +1,73 @@
+entity set games {
+	"move"
+};
+
+entity set "boards" {
+	"rows"
+	"columns"
+};
+
+entity set tile {
+	"row"
+	"column"
+};
+
+entity set "tile_type" {
+	"name"
+};
+
+entity set weather {
+	"name"
+};
+
+entity set "fuel_type" {
+	"name"
+};
+
+entity set units {
+	"name"
+	"health"
+	"attack"
+	"defense"
+	"actual_points"
+	"points"
+};
+
+association between 
+{
+	games ONE 
+	"boards" ONE
+}{};
+
+association between 
+{
+	"boards" ONE
+	tile MANY
+}{};
+
+association between 
+{
+	tile MANY
+	"tile_type"	ONE
+}{};
+
+association between 
+{
+	games MANY 
+	weather ONE
+}{};
+
+association "move" between 
+{
+	weather MANY
+	"fuel_type" MANY
+	"tile_type" MANY
+}{
+	"points"
+};
+
+association between 
+{
+	"fuel_type" ONE
+	units MANY
+}{};

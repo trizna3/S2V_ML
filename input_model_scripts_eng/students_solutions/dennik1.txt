@@ -1,0 +1,22 @@
+entity set "substance" {
+	"name"
+	"equation"
+};
+
+entity set "reaction" {
+	"equation"	
+};
+
+entity set "product" {
+	"formula"	
+	"substance_weight"	
+};
+
+association between 
+{
+	"substance" MANY
+	"reaction" ONE
+}{
+};
+
+generalization from "product" to "reaction";
