@@ -12,6 +12,8 @@ import ErParser
 # s2v3 = Sense2VecComponent(nlp.vocab).from_disk("../pretrainedVectors/s2v_old")
 
 s2v = None
+total_passed = 0
+total_paired = 0
 
 def getVectorsDistance(word1, word2):
     '''
@@ -19,11 +21,13 @@ def getVectorsDistance(word1, word2):
     '''
     global s2v
     if s2v == None:
+        # Vector files are not present in the repository
         s2v = Sense2Vec().from_disk("C:\SKOLA\machine_learning\Project\pretrainedVectors\s2v_reddit_2019_lg")
+        # s2v = Sense2Vec().from_disk("C:\SKOLA\machine_learning\Project\wiki corpus/backup/exported")
 
     if word1 in s2v and word2 in s2v:
         return s2v.similarity(word1, word2)
-    return -1
+    return 0
 
 def compute(processed_file_name, treshold):
     '''
@@ -40,10 +44,12 @@ def compute(processed_file_name, treshold):
             es2_attributes = entity_set_attributes2[es2_key]
             rate = compute_similarity_rate(es1_name,es1_attributes,es2_name,es2_attributes)
             if ([es1_key,es2_key] in paired_entity_sets):
-                print(es1_name + " : " + es2_name + " -> " + str(rate))
                 if (rate > treshold):
                     passed_threshold += 1
-    print(str(passed_threshold) + " out of " + str(len(paired_entity_sets)) + " passed the threshold")
+    global total_passed
+    global total_paired
+    total_paired += len(paired_entity_sets)
+    total_passed += passed_threshold
 
 def compute_similarity_rate(es1_name,es1_attrs,es2_name,es2_attrs):
     similarity_measure = getSimilarity(es1_name,es2_name)
@@ -66,8 +72,6 @@ def parse(processed_file_name):
     '''
     Parses files, created in ErParser.
     Creates dict objects for later similarity computation.
-    :param processed_file_name:
-    :return:
     '''
     entity_set_names1 = dict()
     entity_set_attributes1 = dict()
@@ -96,8 +100,7 @@ def parse(processed_file_name):
     return entity_set_names1,entity_set_attributes1,entity_set_names2,entity_set_attributes2,paired_entity_sets
 
 for model in ErParser.get_model_names():
-    print("MODEL = " + model)
     for i in [1,2]:
-        compute("testing_data_processed_paired/" + model + "_student" + str(i) + "_processed.txt", 0.5)
-    break
+        compute("testing_data_processed_paired/" + model + "_student" + str(i) + "_processed.txt", 0.3)
 
+print(str(total_passed) + " out of " + str(total_paired) + " passed the threshold")
